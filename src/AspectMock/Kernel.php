@@ -20,7 +20,7 @@ class Kernel extends AspectKernel
         if (!isset($options['excludePaths'])) {
             $options['excludePaths'] = [];
         }
-        $options['debug'] = true;
+        isset($options['debug']) || $options['debug'] = true;
         $options['excludePaths'] = [];
         $options['excludePaths'][] = __DIR__;
 
